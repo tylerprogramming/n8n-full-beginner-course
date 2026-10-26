@@ -75,6 +75,26 @@ This repository contains a comprehensive collection of n8n workflow projects, de
 4. Import CSV templates from the Google Sheets folder into your Google Sheets
 5. Follow the project progression from 1 to 10
 
+## Models used in these workflows were retired
+
+Some workflows were exported with models that have since been shut down. They import fine, but the model node fails when it runs until you pick a current model in it:
+
+| Workflow file | Node | Model in the file | Status | Pick instead |
+| --- | --- | --- | --- | --- |
+| `Project_3 Basic LLM Chain.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_5 Vector Database AI Chatbot.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_7 Social Media Generation.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_7 LinkedIn Subflow.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_7 X Subflow.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_10 MCP Chatbot Client.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_8&9 Telegram Google Calendar Assistant.json` | OpenAI Chat Model | `o3-mini` | shut down 2026-10-23 | `gpt-5.6-sol` |
+
+The replacements are the ones Anthropic and OpenAI list on their deprecation pages ([Anthropic](https://docs.anthropic.com/en/docs/about-claude/model-deprecations), [OpenAI](https://developers.openai.com/api/docs/deprecations)).
+
+To fix one: open the workflow, double-click the model node, and choose the new model from the **Model** list. Then save.
+
+Project 6 (Receipt Analyzer) uses `gpt-4o`, which still works. OpenAI has announced that its GPT-4o snapshots (`gpt-4o-2024-08-06`, `gpt-4o-2024-11-20`) shut down on 2027-01-14, with `gpt-6-luna` as the replacement.
+
 ## Prerequisites
 
 - Basic understanding of APIs and automation
@@ -93,7 +113,6 @@ This repository contains a comprehensive collection of n8n workflow projects, de
 
 ### General n8n Documentation
 - [n8n Official Documentation](https://docs.n8n.io/)
-- [n8n Academy](https://academy.n8n.io/)
 - [n8n Community Forum](https://community.n8n.io/)
 - [n8n Quickstart Guide](https://docs.n8n.io/try-it-out/)
 - [Data Transformation Guide](https://docs.n8n.io/data/transforming-data/)
@@ -101,7 +120,7 @@ This repository contains a comprehensive collection of n8n workflow projects, de
 ### Project-Specific Resources
 
 #### Project 1: RSS & Google Sheets
-- [RSS Node Documentation](https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.rssfeedreadtrigger/)
+- [RSS Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger)
 - [Google Sheets Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
 - [Working with JSON](https://docs.n8n.io/data/data-structure/)
 
@@ -116,7 +135,7 @@ This repository contains a comprehensive collection of n8n workflow projects, de
 - [Expression Editor Guide](https://docs.n8n.io/code-examples/expressions/)
 
 #### Project 4: Web Scraping
-- [HTTP Request Node Examples](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/examples/)
+- [HTTP Request Node Examples](https://docs.n8n.io/build/code-in-n8n/cookbook/http-request-node)
 - [Airtable Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.airtable/)
 - [HTML Extract Node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/)
 
@@ -127,26 +146,26 @@ This repository contains a comprehensive collection of n8n workflow projects, de
 
 #### Project 6: Document Processing
 - [Binary Data Handling](https://docs.n8n.io/data/binary-data/)
-- [PDF Manipulation](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.pdf/)
-- [OCR Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsofttranslator/)
+- [Extract From File (PDF)](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile)
+- [Image Analysis (OpenAI node)](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai)
 
 #### Project 7: Social Media
 - [Twitter/X Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
 - [LinkedIn Node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/)
-- [Subflows Guide](https://docs.n8n.io/workflows/subflows/)
+- [Subflows Guide](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows)
 
 #### Project 8 & 9: Telegram & Calendar
 - [Telegram Node Documentation](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/)
 - [Google Calendar Node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
-- [Date & Time Helpers](https://docs.n8n.io/code-examples/expressions/dates/)
+- [Date & Time Helpers](https://docs.n8n.io/build/work-with-data/handle-special-data-types/work-with-dates-and-times)
 
 #### Project 10: MCP & Advanced Integration
-- [Custom API Creation](https://docs.n8n.io/hosting/api/)
+- [n8n API](https://docs.n8n.io/connect/n8n-api)
 - [Error Handling](https://docs.n8n.io/workflows/error-handling/)
 - [Security Best Practices](https://docs.n8n.io/hosting/security/)
 
 ### Additional Resources
 - [n8n Blog](https://blog.n8n.io/)
-- [n8n Use Cases](https://n8n.io/use-cases/)
-- [API Authentication Guide](https://docs.n8n.io/integrations/authentication/)
+- [n8n Workflow Templates](https://n8n.io/workflows/)
+- [Credentials Guide](https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials)
 - [Expression Syntax Guide](https://docs.n8n.io/code-examples/expressions/)
