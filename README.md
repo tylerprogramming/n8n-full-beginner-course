@@ -75,6 +75,26 @@ This repository contains a comprehensive collection of n8n workflow projects, de
 4. Import CSV templates from the Google Sheets folder into your Google Sheets
 5. Follow the project progression from 1 to 10
 
+## Models used in these workflows were retired
+
+Some workflows were exported with models that have since been shut down. They import fine, but the model node fails when it runs until you pick a current model in it:
+
+| Workflow file | Node | Model in the file | Status | Pick instead |
+| --- | --- | --- | --- | --- |
+| `Project_3 Basic LLM Chain.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_5 Vector Database AI Chatbot.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_7 Social Media Generation.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_7 LinkedIn Subflow.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_7 X Subflow.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_10 MCP Chatbot Client.json` | Anthropic Chat Model | `claude-3-7-sonnet-20250219` | retired 2026-02-19 | `claude-sonnet-5-5` |
+| `Project_8&9 Telegram Google Calendar Assistant.json` | OpenAI Chat Model | `o3-mini` | shut down 2026-10-23 | `gpt-5.6-sol` |
+
+The replacements are the ones Anthropic and OpenAI list on their deprecation pages ([Anthropic](https://docs.anthropic.com/en/docs/about-claude/model-deprecations), [OpenAI](https://developers.openai.com/api/docs/deprecations)).
+
+To fix one: open the workflow, double-click the model node, and choose the new model from the **Model** list. Then save.
+
+Project 6 (Receipt Analyzer) uses `gpt-4o`, which still works. OpenAI has announced that its GPT-4o snapshots (`gpt-4o-2024-08-06`, `gpt-4o-2024-11-20`) shut down on 2027-01-14, with `gpt-6-luna` as the replacement.
+
 ## Prerequisites
 
 - Basic understanding of APIs and automation
