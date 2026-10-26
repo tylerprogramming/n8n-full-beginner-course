@@ -113,7 +113,6 @@ Project 6 (Receipt Analyzer) uses `gpt-4o`, which still works. OpenAI has announ
 
 ### General n8n Documentation
 - [n8n Official Documentation](https://docs.n8n.io/)
-- [n8n Academy](https://academy.n8n.io/)
 - [n8n Community Forum](https://community.n8n.io/)
 - [n8n Quickstart Guide](https://docs.n8n.io/try-it-out/)
 - [Data Transformation Guide](https://docs.n8n.io/data/transforming-data/)
@@ -121,7 +120,7 @@ Project 6 (Receipt Analyzer) uses `gpt-4o`, which still works. OpenAI has announ
 ### Project-Specific Resources
 
 #### Project 1: RSS & Google Sheets
-- [RSS Node Documentation](https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.rssfeedreadtrigger/)
+- [RSS Node Documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger)
 - [Google Sheets Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
 - [Working with JSON](https://docs.n8n.io/data/data-structure/)
 
@@ -136,7 +135,7 @@ Project 6 (Receipt Analyzer) uses `gpt-4o`, which still works. OpenAI has announ
 - [Expression Editor Guide](https://docs.n8n.io/code-examples/expressions/)
 
 #### Project 4: Web Scraping
-- [HTTP Request Node Examples](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/examples/)
+- [HTTP Request Node Examples](https://docs.n8n.io/build/code-in-n8n/cookbook/http-request-node)
 - [Airtable Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.airtable/)
 - [HTML Extract Node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/)
 
@@ -147,26 +146,26 @@ Project 6 (Receipt Analyzer) uses `gpt-4o`, which still works. OpenAI has announ
 
 #### Project 6: Document Processing
 - [Binary Data Handling](https://docs.n8n.io/data/binary-data/)
-- [PDF Manipulation](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.pdf/)
-- [OCR Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsofttranslator/)
+- [Extract From File (PDF)](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile)
+- [Image Analysis (OpenAI node)](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai)
 
 #### Project 7: Social Media
 - [Twitter/X Integration](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
 - [LinkedIn Node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/)
-- [Subflows Guide](https://docs.n8n.io/workflows/subflows/)
+- [Subflows Guide](https://docs.n8n.io/build/flow-logic/convert-to-sub-workflows)
 
 #### Project 8 & 9: Telegram & Calendar
 - [Telegram Node Documentation](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/)
 - [Google Calendar Node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
-- [Date & Time Helpers](https://docs.n8n.io/code-examples/expressions/dates/)
+- [Date & Time Helpers](https://docs.n8n.io/build/work-with-data/handle-special-data-types/work-with-dates-and-times)
 
 #### Project 10: MCP & Advanced Integration
-- [Custom API Creation](https://docs.n8n.io/hosting/api/)
+- [n8n API](https://docs.n8n.io/connect/n8n-api)
 - [Error Handling](https://docs.n8n.io/workflows/error-handling/)
 - [Security Best Practices](https://docs.n8n.io/hosting/security/)
 
 ### Additional Resources
 - [n8n Blog](https://blog.n8n.io/)
-- [n8n Use Cases](https://n8n.io/use-cases/)
-- [API Authentication Guide](https://docs.n8n.io/integrations/authentication/)
+- [n8n Workflow Templates](https://n8n.io/workflows/)
+- [Credentials Guide](https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials)
 - [Expression Syntax Guide](https://docs.n8n.io/code-examples/expressions/)
